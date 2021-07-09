@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/url/shorten
+Content-Type: application/json
+
+{
+  "longUrl": "https://www.amazon.ca/Dual-Monitor-Stand-Articulating-Adjustable/dp/B07SSRJ6Z8/?_encoding=UTF8&smid=AE86KGVQSYZ93&pd_rd_w=6cK0J&pf_rd_p=4cb09ac1-c84c-4c39-97ec-0831966be380&pf_rd_r=VN19H0RQMZ18F37KX9HQ&pd_rd_r=f65ae5f1-7384-4403-a7a9-ebed42e1ddee&pd_rd_wg=bGWFt&ref_=pd_gw_unk",
+  "memo":"Dual Monitor Stand"
+}
