@@ -9,6 +9,9 @@ router.get("/:code", async (req, res) => {
   try {
     const url = await Url.findOne({ urlCode: req.params.code });
 
+    url.clicks++
+    await url.save()
+
     if (url) {
       return res.redirect(url.longUrl);
     } else {
@@ -19,5 +22,11 @@ router.get("/:code", async (req, res) => {
     res.status(500).json("Server error.");
   }
 });
+
+// Home page
+router.get("/",async (req,res)=>{
+    const shortUrls= await Url.find()
+    res.render('index',{shortUrls:shortUrls})
+})
 
 module.exports = router;
